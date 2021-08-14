@@ -1,0 +1,19 @@
+dps:
+  s05:
+    dp_id: 2533855009
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'untagged link #1 to u041'
+        name: b1
+        native_vlan: vlan-1
+      2:
+        description: 'untagged link #1 to u062'
+        name: b2
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

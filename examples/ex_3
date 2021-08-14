@@ -1,0 +1,55 @@
+dps:
+  s0D:
+    dp_id: 2299424367
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s0E:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #2 to s0E:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'untagged link #1 to u0F1'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u0G2'
+        name: b4
+        native_vlan: vlan-2
+  s0E:
+    dp_id: 2299424368
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s0D:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #2 to s0D:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'untagged link #1 to u0H3'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u0I4'
+        name: b4
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

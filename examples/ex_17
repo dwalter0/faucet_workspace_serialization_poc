@@ -1,0 +1,175 @@
+dps:
+  s2d:
+    dp_id: 45792736
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s2e:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s2f:1'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s2g:1'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s2e:3'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s2f:4'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s2g:3'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u2h1'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u2i2'
+        name: b8
+        native_vlan: vlan-2
+  s2e:
+    dp_id: 45792737
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s2d:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s2f:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #2 to s2d:4'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s2f:5'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'untagged link #1 to u2j3'
+        name: b5
+        native_vlan: vlan-1
+      6:
+        description: 'untagged link #1 to u2k4'
+        name: b6
+        native_vlan: vlan-2
+  s2f:
+    dp_id: 45792738
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s2d:2'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s2e:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s2g:2'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s2d:5'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s2e:4'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s2g:4'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u2l5'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u2m6'
+        name: b8
+        native_vlan: vlan-2
+  s2g:
+    dp_id: 45792739
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s2d:3'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s2f:3'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #2 to s2d:6'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s2f:6'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'untagged link #1 to u2n7'
+        name: b5
+        native_vlan: vlan-1
+      6:
+        description: 'untagged link #1 to u2o8'
+        name: b6
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

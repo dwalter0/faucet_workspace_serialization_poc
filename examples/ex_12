@@ -1,0 +1,153 @@
+dps:
+  s1f:
+    dp_id: 4002524186
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s1g:1'
+        name: b1
+        stack:
+          dp: s1g
+          port: 1
+      2:
+        description: 'stack link #2 to s1g:4'
+        name: b2
+        stack:
+          dp: s1g
+          port: 4
+      3:
+        description: 'untagged link #1 to u1j1'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u1k2'
+        name: b4
+        native_vlan: vlan-2
+    stack:
+      priority: 1
+  s1g:
+    dp_id: 4002524187
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s1f:1'
+        name: b1
+        stack:
+          dp: s1f
+          port: 1
+      2:
+        description: 'stack link #1 to s1h:2'
+        name: b2
+        stack:
+          dp: s1h
+          port: 2
+      3:
+        description: 'stack link #1 to s1i:2'
+        name: b3
+        stack:
+          dp: s1i
+          port: 2
+      4:
+        description: 'stack link #2 to s1f:2'
+        name: b4
+        stack:
+          dp: s1f
+          port: 2
+      5:
+        description: 'stack link #2 to s1h:4'
+        name: b5
+        stack:
+          dp: s1h
+          port: 4
+      6:
+        description: 'stack link #2 to s1i:4'
+        name: b6
+        stack:
+          dp: s1i
+          port: 4
+      7:
+        description: 'untagged link #1 to u1p7'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u1q8'
+        name: b8
+        native_vlan: vlan-2
+  s1h:
+    dp_id: 4002524188
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s1i:1'
+        name: b1
+        stack:
+          dp: s1i
+          port: 1
+      2:
+        description: 'stack link #1 to s1g:2'
+        name: b2
+        stack:
+          dp: s1g
+          port: 2
+      3:
+        description: 'stack link #2 to s1i:3'
+        name: b3
+        stack:
+          dp: s1i
+          port: 3
+      4:
+        description: 'stack link #2 to s1g:5'
+        name: b4
+        stack:
+          dp: s1g
+          port: 5
+      5:
+        description: 'untagged link #1 to u1l3'
+        name: b5
+        native_vlan: vlan-1
+      6:
+        description: 'untagged link #1 to u1m4'
+        name: b6
+        native_vlan: vlan-2
+  s1i:
+    dp_id: 4002524189
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s1h:1'
+        name: b1
+        stack:
+          dp: s1h
+          port: 1
+      2:
+        description: 'stack link #1 to s1g:3'
+        name: b2
+        stack:
+          dp: s1g
+          port: 3
+      3:
+        description: 'stack link #2 to s1h:3'
+        name: b3
+        stack:
+          dp: s1h
+          port: 3
+      4:
+        description: 'stack link #2 to s1g:6'
+        name: b4
+        stack:
+          dp: s1g
+          port: 6
+      5:
+        description: 'untagged link #1 to u1n5'
+        name: b5
+        native_vlan: vlan-1
+      6:
+        description: 'untagged link #1 to u1o6'
+        name: b6
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

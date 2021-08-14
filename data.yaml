@@ -1,0 +1,55 @@
+---
+vlans:
+  vlan-2:
+    vid: 200
+    acls_in: []
+    routes: []
+  vlan-1:
+    vid: 100
+    acls_in: []
+    routes: []
+dps:
+  s07:
+    dp_id: 56374156
+    hardware: GenericTFM
+    interfaces:
+      3:
+        name: b3
+        description: "untagged link #1 to u091"
+        native_vlan: vlan-1
+        acls_in: []
+      4:
+        name: b4
+        description: "untagged link #1 to u0A2"
+        native_vlan: vlan-2
+        acls_in: []
+      1:
+        name: b1
+        description: "stack link #1 to s08:1"
+        acls_in: []
+      2:
+        name: b2
+        description: "stack link #2 to s08:2"
+        acls_in: []
+  s08:
+    dp_id: 56374157
+    hardware: GenericTFM
+    interfaces:
+      2:
+        name: b2
+        description: "stack link #2 to s07:2"
+        acls_in: []
+      4:
+        name: b4
+        description: "untagged link #1 to u0C4"
+        native_vlan: vlan-2
+        acls_in: []
+      1:
+        name: b1
+        description: "stack link #1 to s07:1"
+        acls_in: []
+      3:
+        name: b3
+        description: "untagged link #1 to u0B3"
+        native_vlan: vlan-1
+        acls_in: []

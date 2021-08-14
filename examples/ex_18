@@ -1,0 +1,201 @@
+dps:
+  s2p:
+    dp_id: 2547515804
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s2q:1'
+        name: b1
+        stack:
+          dp: s2q
+          port: 1
+      2:
+        description: 'stack link #1 to s2r:1'
+        name: b2
+        stack:
+          dp: s2r
+          port: 1
+      3:
+        description: 'stack link #1 to s2s:1'
+        name: b3
+        stack:
+          dp: s2s
+          port: 1
+      4:
+        description: 'stack link #2 to s2q:4'
+        name: b4
+        stack:
+          dp: s2q
+          port: 4
+      5:
+        description: 'stack link #2 to s2r:4'
+        name: b5
+        stack:
+          dp: s2r
+          port: 4
+      6:
+        description: 'stack link #2 to s2s:4'
+        name: b6
+        stack:
+          dp: s2s
+          port: 4
+      7:
+        description: 'untagged link #1 to u2t1'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u2u2'
+        name: b8
+        native_vlan: vlan-2
+    stack:
+      priority: 1
+  s2q:
+    dp_id: 2547515805
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s2p:1'
+        name: b1
+        stack:
+          dp: s2p
+          port: 1
+      2:
+        description: 'stack link #1 to s2r:2'
+        name: b2
+        stack:
+          dp: s2r
+          port: 2
+      3:
+        description: 'stack link #1 to s2s:2'
+        name: b3
+        stack:
+          dp: s2s
+          port: 2
+      4:
+        description: 'stack link #2 to s2p:4'
+        name: b4
+        stack:
+          dp: s2p
+          port: 4
+      5:
+        description: 'stack link #2 to s2r:5'
+        name: b5
+        stack:
+          dp: s2r
+          port: 5
+      6:
+        description: 'stack link #2 to s2s:5'
+        name: b6
+        stack:
+          dp: s2s
+          port: 5
+      7:
+        description: 'untagged link #1 to u2v3'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u2w4'
+        name: b8
+        native_vlan: vlan-2
+  s2r:
+    dp_id: 2547515806
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s2p:2'
+        name: b1
+        stack:
+          dp: s2p
+          port: 2
+      2:
+        description: 'stack link #1 to s2q:2'
+        name: b2
+        stack:
+          dp: s2q
+          port: 2
+      3:
+        description: 'stack link #1 to s2s:3'
+        name: b3
+        stack:
+          dp: s2s
+          port: 3
+      4:
+        description: 'stack link #2 to s2p:5'
+        name: b4
+        stack:
+          dp: s2p
+          port: 5
+      5:
+        description: 'stack link #2 to s2q:5'
+        name: b5
+        stack:
+          dp: s2q
+          port: 5
+      6:
+        description: 'stack link #2 to s2s:6'
+        name: b6
+        stack:
+          dp: s2s
+          port: 6
+      7:
+        description: 'untagged link #1 to u2x5'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u2y6'
+        name: b8
+        native_vlan: vlan-2
+  s2s:
+    dp_id: 2547515807
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s2p:3'
+        name: b1
+        stack:
+          dp: s2p
+          port: 3
+      2:
+        description: 'stack link #1 to s2q:3'
+        name: b2
+        stack:
+          dp: s2q
+          port: 3
+      3:
+        description: 'stack link #1 to s2r:3'
+        name: b3
+        stack:
+          dp: s2r
+          port: 3
+      4:
+        description: 'stack link #2 to s2p:6'
+        name: b4
+        stack:
+          dp: s2p
+          port: 6
+      5:
+        description: 'stack link #2 to s2q:6'
+        name: b5
+        stack:
+          dp: s2q
+          port: 6
+      6:
+        description: 'stack link #2 to s2r:6'
+        name: b6
+        stack:
+          dp: s2r
+          port: 6
+      7:
+        description: 'untagged link #1 to u2z7'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u308'
+        name: b8
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

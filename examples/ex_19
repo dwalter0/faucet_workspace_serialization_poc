@@ -1,0 +1,199 @@
+dps:
+  s31:
+    dp_id: 2997844592
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s32:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s33:1'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s34:1'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s32:4'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s33:4'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s34:4'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u351'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u362'
+        name: b8
+        native_vlan: vlan-2
+  s32:
+    dp_id: 2997844593
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s31:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s33:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s34:2'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s31:4'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s33:5'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s34:5'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u373'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u384'
+        name: b8
+        native_vlan: vlan-2
+  s33:
+    dp_id: 2997844594
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s31:2'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s32:2'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s34:3'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s31:5'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s32:5'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s34:6'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u395'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u3A6'
+        name: b8
+        native_vlan: vlan-2
+  s34:
+    dp_id: 2997844595
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s31:3'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s32:3'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s33:3'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s31:6'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s32:6'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s33:6'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u3B7'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u3C8'
+        name: b8
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

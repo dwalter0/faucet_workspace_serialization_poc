@@ -1,0 +1,127 @@
+dps:
+  s15:
+    dp_id: 198085083
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s16:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #2 to s16:4'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'untagged link #1 to u191'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u1A2'
+        name: b4
+        native_vlan: vlan-2
+  s16:
+    dp_id: 198085084
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s15:1'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #1 to s17:1'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'tagged link #1 to s18:1'
+        name: b3
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      4:
+        description: 'tagged link #2 to s15:2'
+        name: b4
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      5:
+        description: 'tagged link #2 to s17:2'
+        name: b5
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      6:
+        description: 'tagged link #2 to s18:2'
+        name: b6
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      7:
+        description: 'untagged link #1 to u1F7'
+        name: b7
+        native_vlan: vlan-1
+      8:
+        description: 'untagged link #1 to u1G8'
+        name: b8
+        native_vlan: vlan-2
+  s17:
+    dp_id: 198085085
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s16:2'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #2 to s16:5'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'untagged link #1 to u1B3'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u1C4'
+        name: b4
+        native_vlan: vlan-2
+  s18:
+    dp_id: 198085086
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'tagged link #1 to s16:3'
+        name: b1
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      2:
+        description: 'tagged link #2 to s16:6'
+        name: b2
+        tagged_vlans:
+        - vlan-1
+        - vlan-2
+      3:
+        description: 'untagged link #1 to u1D5'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u1E6'
+        name: b4
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200

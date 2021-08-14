@@ -1,0 +1,57 @@
+dps:
+  s07:
+    dp_id: 56374156
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s08:1'
+        name: b1
+        stack:
+          dp: s08
+          port: 1
+      2:
+        description: 'stack link #2 to s08:2'
+        name: b2
+        stack:
+          dp: s08
+          port: 2
+      3:
+        description: 'untagged link #1 to u091'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u0A2'
+        name: b4
+        native_vlan: vlan-2
+    stack:
+      priority: 1
+  s08:
+    dp_id: 56374157
+    hardware: GenericTFM
+    interfaces:
+      1:
+        description: 'stack link #1 to s07:1'
+        name: b1
+        stack:
+          dp: s07
+          port: 1
+      2:
+        description: 'stack link #2 to s07:2'
+        name: b2
+        stack:
+          dp: s07
+          port: 2
+      3:
+        description: 'untagged link #1 to u0B3'
+        name: b3
+        native_vlan: vlan-1
+      4:
+        description: 'untagged link #1 to u0C4'
+        name: b4
+        native_vlan: vlan-2
+version: 2
+vlans:
+  vlan-1:
+    vid: 100
+  vlan-2:
+    vid: 200
