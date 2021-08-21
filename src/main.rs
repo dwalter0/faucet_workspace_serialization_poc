@@ -1,16 +1,16 @@
 extern crate serde_yaml;
 extern crate indexmap;
 
-use std::{collections::HashMap, convert::TryInto};
+use std::{collections::HashMap};
 use std::fs;
-use serde::{Deserialize, Serialize, de::DeserializeSeed, ser::SerializeStruct};
+use serde::{Deserialize, Serialize};
 use std::io::Write;
 
 mod serialization_skippers;
 mod acls;
 mod meter;
 mod router;
-mod sw_interface;
+mod dps_interface;
 mod vlan_route;
 
 
@@ -40,7 +40,7 @@ struct FaucetDocument {
     acls: HashMap<String,acls::ACL>,
     #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
     #[serde(default)]
-    dps: HashMap<String,sw_interface::SW>,
+    dps: HashMap<String,dps_interface::DP>,
     #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     meters: HashMap<String,meter::Meter>,

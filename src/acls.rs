@@ -1,5 +1,5 @@
-use serde::{Deserialize, Serialize, de::DeserializeSeed, ser::SerializeStruct};
-use std::{collections::HashMap, convert::TryInto};
+use serde::{Deserialize, Serialize};
+use std::{collections::HashMap};
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct ACL {
@@ -28,6 +28,12 @@ struct ACLOutput {
     }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
+struct ACLOutputFailover {
+    group_id: u32,
+    ports: Vec<String>
+    }
+
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
 struct ACLOutputTunnel{
     #[serde(rename = "type")]
     tunnel_type: String,
@@ -41,8 +47,4 @@ struct ACLOutputTunnel{
     reverse: bool,
 }
 
-#[derive(Debug, PartialEq, Serialize, Deserialize)]
-struct ACLOutputFailover {
-    group_id: u32,
-    ports: Vec<String>
-    }
+

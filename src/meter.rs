@@ -1,8 +1,13 @@
-use serde::{Deserialize, Serialize, de::DeserializeSeed, ser::SerializeStruct};
-use std::{collections::HashMap, convert::TryInto};
+use serde::{Deserialize, Serialize};
+use std::{collections::HashMap};
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct Meter{
+    meter_id : u32,
+    entry : HashMap<String,MeterEntry>
+}
+#[derive(Debug, PartialEq, Serialize, Deserialize)]
+struct MeterEntry{
     flags: Vec<String>,
     bands:Vec<HashMap<String,MeterBand>>
 }
