@@ -1,34 +1,51 @@
 use serde::{Deserialize, Serialize};
-use std::{collections::HashMap};
+use std::collections::HashMap;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct VLAN {
-    acl_in : String,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_str")]
     #[serde(default)]
-    acls_in : Vec<String>,
-    #[serde(skip_serializing_if = "crate::serialization_skippers::skip_serializing_if_empty_str")]
+    acl_in: String,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_vec")]
     #[serde(default)]
-    description : String,
-    dot1x_assigned : bool,
-    #[serde(skip_serializing_if = "crate::serialization_skippers::skip_serializing_if_empty_vec")]
+    acls_in: Vec<String>,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_str")]
     #[serde(default)]
-    faucet_vips : Vec<String>,
-    #[serde(skip_serializing_if = "crate::serialization_skippers::skip_serializing_if_empty_str")]
+    description: String,
+    #[serde(default = "crate::serialization_helpers::default_bool_false")]
+    dot1x_assigned: bool,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_vec")]
     #[serde(default)]
-    faucet_mac : String,
-    max_hosts : u32,
-    minimum_ip_size_check : bool,
-    name : String,
-    proactive_arp_limit : u32,
-    proactive_nd_limit : u32,
+    faucet_vips: Vec<String>,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_str")]
     #[serde(default)]
-    routes : Vec<VLANRoute>,
-    targeted_gw_resolution : bool,
-    unicast_flood : bool,
-    vid : u32,
-    }
+    faucet_mac: String,
+    #[serde(default = "crate::serialization_helpers::default_u32_255")]
+    max_hosts: u32,
+    #[serde(default = "crate::serialization_helpers::default_bool_true")]
+    minimum_ip_size_check: bool,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_str")]
+    #[serde(default)]
+    name: String,
+    #[serde(default = "crate::serialization_helpers::default_u32_2052")]
+    proactive_arp_limit: u32,
+    #[serde(default = "crate::serialization_helpers::default_u32_2052")]
+    proactive_nd_limit: u32,
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_vec")]
+    #[serde(default)]
+    routes: Vec<VLANRoute>,
+    #[serde(default = "crate::serialization_helpers::default_bool_false")]
+    targeted_gw_resolution: bool,
+    #[serde(default = "crate::serialization_helpers::default_bool_true")]
+    unicast_flood: bool,
+    #[serde(default)]
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_none")]
+    vid: Option<u32>,
+}
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
-struct VLANRoute{
-    route: HashMap<String,String>
+struct VLANRoute {
+    #[serde(skip_serializing_if = "crate::serialization_helpers::skip_serializing_if_empty_hash")]
+    #[serde(default)]
+    route: HashMap<String, String>,
 }

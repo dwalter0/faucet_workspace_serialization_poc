@@ -6,7 +6,7 @@ use std::fs;
 use serde::{Deserialize, Serialize};
 use std::io::Write;
 
-mod serialization_skippers;
+mod serialization_helpers;
 mod acls;
 mod meter;
 mod router;
@@ -35,31 +35,30 @@ mod vlan_route;
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 struct FaucetDocument {
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     acls: HashMap<String,acls::ACL>,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     dps: HashMap<String,dps_interface::DP>,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     meters: HashMap<String,meter::Meter>,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     routers: HashMap<String,router::Router>,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_int")]
-    #[serde(default)]
+    #[serde(default="serialization_helpers::default_u32_2")]
     version: u32,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_vec")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_vec")]
     #[serde(default)]
     include: Vec<String>,
-    #[serde(skip_serializing_if = "serialization_skippers::skip_serializing_if_empty_hash")]
+    #[serde(skip_serializing_if = "serialization_helpers::skip_serializing_if_empty_hash")]
     #[serde(default)]
     vlans: HashMap<String,vlan_route::VLAN>,
 }
 
 fn main() {
-    let s=read_file(String::from("./examples/ex_2"));
+    let s=read_file(String::from("./examples/ex_10"));
     let deserialized_yaml: FaucetDocument = serde_yaml::from_str(&s).unwrap();
     println!("{:?}",deserialized_yaml);
 
